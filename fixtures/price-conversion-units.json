@@ -1,0 +1,74 @@
+{
+  "BTC": {
+    "id": 1,
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "unit_price_usd": 97412.55
+  },
+  "ETH": {
+    "id": 1027,
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "unit_price_usd": 3412.88
+  },
+  "USDT": {
+    "id": 825,
+    "name": "Tether USDt",
+    "symbol": "USDT",
+    "unit_price_usd": 1.0002
+  },
+  "BNB": {
+    "id": 1839,
+    "name": "BNB",
+    "symbol": "BNB",
+    "unit_price_usd": 695.4
+  },
+  "SOL": {
+    "id": 5426,
+    "name": "Solana",
+    "symbol": "SOL",
+    "unit_price_usd": 214.36
+  },
+  "XRP": {
+    "id": 52,
+    "name": "XRP",
+    "symbol": "XRP",
+    "unit_price_usd": 2.41
+  },
+  "USDC": {
+    "id": 3408,
+    "name": "USDC",
+    "symbol": "USDC",
+    "unit_price_usd": 0.9998
+  },
+  "ADA": {
+    "id": 2010,
+    "name": "Cardano",
+    "symbol": "ADA",
+    "unit_price_usd": 0.9842
+  },
+  "DOGE": {
+    "id": 74,
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "unit_price_usd": 0.3214
+  },
+  "AVAX": {
+    "id": 5805,
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "unit_price_usd": 38.72
+  },
+  "LINK": {
+    "id": 1975,
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "unit_price_usd": 22.84
+  },
+  "MATIC": {
+    "id": 3890,
+    "name": "Polygon",
+    "symbol": "MATIC",
+    "unit_price_usd": 0.4521
+  }
+}

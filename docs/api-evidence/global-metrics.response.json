@@ -1,0 +1,73 @@
+{
+  "_evidence_note": "REAL CoinMarketCap response via the CMCPulse proxy (live transport, https://pro-api.coinmarketcap.com), captured 2026-11-25 ~16:52 UTC. API key sent as X-CMC_PRO_API_KEY header by the server; the key appears nowhere in this response. Full body for GET /api/global-metrics (proxy of /v1/global-metrics/quotes/latest).",
+  "data": {
+    "quote": {
+      "USD": {
+        "total_market_cap": 2006115908442.3276,
+        "total_volume_24h": 74666888819.88,
+        "total_volume_24h_reported": 604831318149.68,
+        "altcoin_volume_24h": 40077039726.95384,
+        "altcoin_volume_24h_reported": 395789454827.7273,
+        "altcoin_market_cap": 833988417478.419,
+        "defi_volume_24h": 9726496357.684683,
+        "defi_market_cap": 57916018006.84403,
+        "defi_volume_24h_reported": 224975362184.06717,
+        "defi_24h_percentage_change": -8.3113096292,
+        "stablecoin_volume_24h": 77600450992.65596,
+        "stablecoin_volume_24h_reported": 591014235623.083,
+        "stablecoin_market_cap": 268044573341.4845,
+        "stablecoin_24h_percentage_change": -5.9168091482,
+        "derivatives_volume_24h": 814765493778.1907,
+        "derivatives_volume_24h_reported": 844327786551.5977,
+        "derivatives_24h_percentage_change": -3.305148938,
+        "total_market_cap_yesterday": 2043919887819.725,
+        "total_volume_24h_yesterday": 79570223651,
+        "total_market_cap_yesterday_percentage_change": -1.84958225,
+        "total_volume_24h_yesterday_percentage_change": -6.16227353,
+        "last_updated": "2026-11-25T16:50:59.999Z"
+      }
+    },
+    "btc_dominance": 58.42770530014,
+    "eth_dominance": 9.961132824367,
+    "active_cryptocurrencies": 7847,
+    "total_cryptocurrencies": 40281,
+    "active_market_pairs": 106178,
+    "active_exchanges": 989,
+    "total_exchanges": 13457,
+    "last_updated": "2026-11-25T16:50:59.999Z",
+    "eth_dominance_yesterday": 10.00105722,
+    "btc_dominance_yesterday": 58.61080725,
+    "eth_dominance_24h_percentage_change": -0.039924395633,
+    "btc_dominance_24h_percentage_change": -0.18310194986,
+    "defi_volume_24h": 9726496357.684683,
+    "defi_volume_24h_reported": 224975362184.06717,
+    "defi_market_cap": 57916018006.84403,
+    "defi_24h_percentage_change": -8.311309629224,
+    "stablecoin_volume_24h": 77600450992.65596,
+    "stablecoin_volume_24h_reported": 591014235623.083,
+    "stablecoin_market_cap": 268044573341.4845,
+    "stablecoin_24h_percentage_change": -5.916809148241,
+    "derivatives_volume_24h": 814765493778.1907,
+    "derivatives_volume_24h_reported": 844327786551.5977,
+    "derivatives_24h_percentage_change": -3.305148938005,
+    "total_crypto_dex_currencies": 66884550,
+    "today_incremental_crypto_number": 0,
+    "past_24h_incremental_crypto_number": 62095,
+    "past_7d_incremental_crypto_number": 382568,
+    "past_30d_incremental_crypto_number": 2006691,
+    "today_change_percent": 5.0833888e-05,
+    "tracked_yearly_number": {
+      "maxIncrementalNumber": 7681147,
+      "minIncrementalNumber": 34,
+      "maxIncrementalDate": "2026-03-19T00:00:00.000Z",
+      "minIncrementalDate": "2026-11-25T00:00:00.000Z"
+    }
+  },
+  "meta": {
+    "source": "coinmarketcap",
+    "cached": false,
+    "stale": false,
+    "creditCount": 1,
+    "timestamp": "2026-11-25T16:51:58.305Z"
+  }
+}

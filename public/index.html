@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMCPulse — Crypto Market Screener & Portfolio Tracker</title>
+<meta name="description" content="Screen the top cryptocurrencies, track a watchlist and compute portfolio PnL — powered by the CoinMarketCap API.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+</head>
+<body>
+
+<div id="fixture-ribbon" class="ribbon hidden">
+  FIXTURE MODE — this server is answering from recorded sample responses that follow the documented
+  CoinMarketCap response shapes. Figures below are illustrative, <strong>not live market data</strong>.
+</div>
+<div id="stale-note" class="ribbon ribbon-stale hidden"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">📈</div>
+    <div>
+      <h1>CMCPulse</h1>
+      <p>Crypto market screener &amp; portfolio tracker</p>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <label class="switch-label">
+      <input type="checkbox" id="autorefresh"> Auto-refresh 60s
+    </label>
+    <span id="last-updated" class="muted"></span>
+    <button id="refresh-btn" class="btn">↻ Refresh</button>
+  </div>
+</header>
+
+<section class="stats" id="stats">
+  <div class="stat"><span class="stat-label">Total Market Cap</span><span class="stat-value" data-stat="mcap">—</span></div>
+  <div class="stat"><span class="stat-label">24h Trading Volume</span><span class="stat-value" data-stat="vol">—</span></div>
+  <div class="stat"><span class="stat-label">BTC Dominance</span><span class="stat-value" data-stat="btc">—</span></div>
+  <div class="stat"><span class="stat-label">ETH Dominance</span><span class="stat-value" data-stat="eth">—</span></div>
+  <div class="stat"><span class="stat-label">Active Cryptocurrencies</span><span class="stat-value" data-stat="active">—</span></div>
+</section>
+
+<div id="error-banner" class="error-banner hidden">
+  <span id="error-text"></span>
+  <button id="error-retry" class="btn btn-small">Retry</button>
+</div>
+
+<nav class="tabs">
+  <button class="tab active" data-view="screener">Screener</button>
+  <button class="tab" data-view="watchlist">Watchlist <span id="watch-count" class="badge"></span></button>
+  <button class="tab" data-view="portfolio">Portfolio</button>
+</nav>
+
+<main>
+  <!-- ================= Screener ================= -->
+  <section id="view-screener" class="view active">
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search name or symbol… (e.g. Solana, SOL)">
+      <select id="direction-filter">
+        <option value="all">All coins</option>
+        <option value="gainers">Only gainers (24h)</option>
+        <option value="losers">Only losers (24h)</option>
+      </select>
+      <label class="inline-label">Min 24h volume $
+        <input id="min-volume" type="number" min="0" step="any" placeholder="0">
+      </label>
+      <span id="row-count" class="muted"></span>
+    </div>
+    <div class="table-wrap">
+      <table id="screener-table">
+        <thead>
+          <tr>
+            <th class="col-star"></th>
+            <th data-sort="cmc_rank" class="sortable">#</th>
+            <th data-sort="name" class="sortable">Coin</th>
+            <th data-sort="price" class="sortable num">Price</th>
+            <th data-sort="percent_change_1h" class="sortable num">1h %</th>
+            <th data-sort="percent_change_24h" class="sortable num">24h %</th>
+            <th data-sort="percent_change_7d" class="sortable num">7d %</th>
+            <th data-sort="market_cap" class="sortable num">Market Cap</th>
+            <th data-sort="volume_24h" class="sortable num">Volume (24h)</th>
+          </tr>
+        </thead>
+        <tbody id="screener-body"></tbody>
+      </table>
+    </div>
+    <p class="hint">Click a row for coin details and the price converter. Click ☆ to add a coin to your watchlist.</p>
+  </section>
+
+  <!-- ================= Watchlist ================= -->
+  <section id="view-watchlist" class="view">
+    <div id="watchlist-empty" class="empty hidden">
+      <p>Your watchlist is empty.</p>
+      <p class="muted">Star any coin in the Screener (☆) and it will be priced here, live, via the quotes endpoint.</p>
+    </div>
+    <div class="table-wrap">
+      <table id="watchlist-table">
+        <thead>
+          <tr><th class="col-star"></th><th>Coin</th><th class="num">Price</th><th class="num">24h %</th><th class="num">7d %</th><th class="num">Market Cap</th></tr>
+        </thead>
+        <tbody id="watchlist-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= Portfolio ================= -->
+  <section id="view-portfolio" class="view">
+    <form id="holding-form" class="holding-form">
+      <input id="holding-symbol" list="symbol-list" placeholder="Symbol (e.g. BTC)" required>
+      <datalist id="symbol-list"></datalist>
+      <input id="holding-amount" type="number" step="any" min="0" placeholder="Amount held" required>
+      <input id="holding-avgbuy" type="number" step="any" min="0" placeholder="Avg buy price (USD)" required>
+      <button class="btn" type="submit">+ Add holding</button>
+      <span id="holding-error" class="form-error"></span>
+    </form>
+    <div id="portfolio-empty" class="empty hidden">
+      <p>No holdings yet.</p>
+      <p class="muted">Add a position above — CMCPulse values it live and computes your profit/loss against your average buy price.</p>
+    </div>
+    <div class="table-wrap">
+      <table id="portfolio-table">
+        <thead>
+          <tr><th>Coin</th><th class="num">Amount</th><th class="num">Avg Buy</th><th class="num">Price</th><th class="num">Value</th><th class="num">PnL</th><th class="num">PnL %</th><th></th></tr>
+        </thead>
+        <tbody id="portfolio-body"></tbody>
+        <tfoot id="portfolio-foot"></tfoot>
+      </table>
+    </div>
+    <p class="hint">Holdings and watchlist are stored only in your browser (localStorage). Prices come from the CoinMarketCap quotes endpoint.</p>
+  </section>
+</main>
+
+<!-- ================= Coin detail drawer ================= -->
+<div id="drawer-overlay" class="drawer-overlay hidden"></div>
+<aside id="drawer" class="drawer hidden" aria-label="Coin details">
+  <button id="drawer-close" class="drawer-close" aria-label="Close">×</button>
+  <div id="drawer-content"></div>
+</aside>
+
+<footer>
+  <p>Data: <strong>CoinMarketCap API</strong>, fetched server-side (the API blocks direct browser calls via CORS, and the key must stay secret).</p>
+  <p class="muted">Endpoints used: <code>/v1/cryptocurrency/listings/latest</code> · <code>/v1/cryptocurrency/quotes/latest</code> · <code>/v1/cryptocurrency/info</code> · <code>/v1/global-metrics/quotes/latest</code> · <code>/v1/tools/price-conversion</code></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

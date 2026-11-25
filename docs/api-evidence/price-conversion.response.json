@@ -1,0 +1,23 @@
+{
+  "_evidence_note": "REAL CoinMarketCap response via the CMCPulse proxy (live transport, https://pro-api.coinmarketcap.com), captured 2026-11-25 ~16:52 UTC. API key sent as X-CMC_PRO_API_KEY header by the server; the key appears nowhere in this response. Full body for GET /api/convert?amount=1&symbol=BTC (proxy of /v1/tools/price-conversion): 1 BTC = the USD price in data.quote.USD.price.",
+  "data": {
+    "id": 1,
+    "symbol": "BTC",
+    "name": "Bitcoin",
+    "amount": 1,
+    "quote": {
+      "USD": {
+        "price": 58338.18717136559,
+        "last_updated": "2026-11-25T16:51:04.000Z"
+      }
+    },
+    "last_updated": "2026-11-25T16:51:48.063Z"
+  },
+  "meta": {
+    "source": "coinmarketcap",
+    "cached": false,
+    "stale": false,
+    "creditCount": 1,
+    "timestamp": "2026-11-25T16:51:59.526Z"
+  }
+}

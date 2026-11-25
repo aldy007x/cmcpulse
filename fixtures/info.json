@@ -1,0 +1,446 @@
+{
+  "status": {
+    "timestamp": "2026-11-25T16:00:00.000Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 12,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "1": {
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "category": "coin",
+      "description": "Bitcoin (BTC) is a cryptocurrency launched in 2010. Users are able to generate BTC through the process of mining. Bitcoin has a current supply of 19,781,234 with the maximum supply being 21,000,000. The last known price of Bitcoin is 97,412.55 USD.",
+      "slug": "bitcoin",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+      "date_added": "2010-07-13T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "mineable",
+        "pow",
+        "sha-256",
+        "store-of-value"
+      ],
+      "platform": null,
+      "date_launched": "2010-07-13T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://bitcoin.org/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "52": {
+      "id": 52,
+      "name": "XRP",
+      "symbol": "XRP",
+      "category": "coin",
+      "description": "XRP (XRP) is a cryptocurrency launched in 2013. It is the native digital asset of the XRP Ledger, designed for fast, low-cost international payments.",
+      "slug": "xrp",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/52.png",
+      "date_added": "2013-08-04T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "medium-of-exchange",
+        "enterprise-solutions",
+        "payments"
+      ],
+      "platform": null,
+      "date_launched": "2013-08-04T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://xrpl.org/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "74": {
+      "id": 74,
+      "name": "Dogecoin",
+      "symbol": "DOGE",
+      "category": "coin",
+      "description": "Dogecoin (DOGE) is a cryptocurrency launched in 2013. It features the Shiba Inu dog from the Doge meme as its logo and is used for tipping and payments.",
+      "slug": "dogecoin",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/74.png",
+      "date_added": "2013-12-15T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "mineable",
+        "pow",
+        "scrypt",
+        "medium-of-exchange"
+      ],
+      "platform": null,
+      "date_launched": "2013-12-15T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": true,
+      "urls": {
+        "website": [
+          "https://dogecoin.com/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "825": {
+      "id": 825,
+      "name": "Tether USDt",
+      "symbol": "USDT",
+      "category": "coin",
+      "description": "Tether USDt (USDT) is a cryptocurrency and stablecoin pegged to the US Dollar, launched in 2015. It aims to maintain a 1:1 value with the USD.",
+      "slug": "tether",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png",
+      "date_added": "2015-02-25T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "stablecoin",
+        "asset-backed-stablecoin",
+        "usd-stablecoin"
+      ],
+      "platform": null,
+      "date_launched": "2015-02-25T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": true,
+      "urls": {
+        "website": [
+          "https://tether.to/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "1027": {
+      "id": 1027,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "category": "coin",
+      "description": "Ethereum (ETH) is a cryptocurrency launched in 2015. It is a decentralized, open-source blockchain featuring smart contract functionality. Ethereum has a current supply of 120,450,000.",
+      "slug": "ethereum",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png",
+      "date_added": "2015-08-07T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "pos",
+        "smart-contracts",
+        "ethereum-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2015-08-07T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": true,
+      "urls": {
+        "website": [
+          "https://ethereum.org/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "1839": {
+      "id": 1839,
+      "name": "BNB",
+      "symbol": "BNB",
+      "category": "coin",
+      "description": "BNB (BNB) is a cryptocurrency launched in 2017. It is the native token of the BNB Chain ecosystem and is used for transaction fees and governance.",
+      "slug": "bnb",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png",
+      "date_added": "2017-07-25T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "pos",
+        "platform",
+        "bnb-chain-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2017-07-25T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://www.bnbchain.org/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "1975": {
+      "id": 1975,
+      "name": "Chainlink",
+      "symbol": "LINK",
+      "category": "coin",
+      "description": "Chainlink (LINK) is a cryptocurrency launched in 2017. It is a decentralized oracle network that provides real-world data to smart contracts on the blockchain.",
+      "slug": "chainlink",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png",
+      "date_added": "2017-09-20T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "oracle",
+        "smart-contracts",
+        "ethereum-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2017-09-20T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://chain.link/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "2010": {
+      "id": 2010,
+      "name": "Cardano",
+      "symbol": "ADA",
+      "category": "coin",
+      "description": "Cardano (ADA) is a cryptocurrency launched in 2017. It is a proof-of-stake blockchain platform built with a research-first approach.",
+      "slug": "cardano",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png",
+      "date_added": "2017-10-01T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "pos",
+        "smart-contracts",
+        "cardano-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2017-10-01T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://cardano.org/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "3408": {
+      "id": 3408,
+      "name": "USDC",
+      "symbol": "USDC",
+      "category": "coin",
+      "description": "USDC (USDC) is a cryptocurrency and stablecoin pegged to the US Dollar, launched in 2018 and issued by Circle.",
+      "slug": "usd-coin",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png",
+      "date_added": "2018-10-08T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "stablecoin",
+        "asset-backed-stablecoin",
+        "usd-stablecoin"
+      ],
+      "platform": null,
+      "date_launched": "2018-10-08T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": true,
+      "urls": {
+        "website": [
+          "https://www.circle.com/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "3890": {
+      "id": 3890,
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "category": "coin",
+      "description": "Polygon (MATIC) is a cryptocurrency launched in 2019. It is a scaling platform for Ethereum-compatible blockchain networks.",
+      "slug": "polygon",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png",
+      "date_added": "2019-04-28T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "pos",
+        "scaling",
+        "polygon-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2019-04-28T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://polygon.technology/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "5426": {
+      "id": 5426,
+      "name": "Solana",
+      "symbol": "SOL",
+      "category": "coin",
+      "description": "Solana (SOL) is a cryptocurrency launched in 2020. It is a high-performance blockchain supporting smart contracts and decentralized applications.",
+      "slug": "solana",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png",
+      "date_added": "2020-04-10T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "pos",
+        "smart-contracts",
+        "solana-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2020-04-10T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": true,
+      "urls": {
+        "website": [
+          "https://solana.com/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    },
+    "5805": {
+      "id": 5805,
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "category": "coin",
+      "description": "Avalanche (AVAX) is a cryptocurrency launched in 2020. It is a platform for launching decentralized applications and custom blockchain networks.",
+      "slug": "avalanche",
+      "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png",
+      "date_added": "2020-09-21T00:00:00.000Z",
+      "notice": null,
+      "tags": [
+        "pos",
+        "smart-contracts",
+        "avalanche-ecosystem"
+      ],
+      "platform": null,
+      "date_launched": "2020-09-21T00:00:00.000Z",
+      "contract_address": [],
+      "self_reported_circulating_supply": null,
+      "self_reported_market_cap": null,
+      "self_reported_tags": null,
+      "infinite_supply": false,
+      "urls": {
+        "website": [
+          "https://www.avax.network/"
+        ],
+        "technical_doc": [],
+        "twitter": [],
+        "reddit": [],
+        "message_board": [],
+        "announcement": [],
+        "chat": [],
+        "explorer": [],
+        "source_code": []
+      }
+    }
+  }
+}

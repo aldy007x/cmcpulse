@@ -217,7 +217,13 @@ function renderScreener() {
 
 /* ------------------------------------------------------------- watchlist */
 
+// Monotonic sequence guarding renderWatchlist: rapid star toggles fire
+// overlapping async renders, and without this a stale render (fewer coins)
+// can resolve after the current one and overwrite it.
+let watchlistRenderSeq = 0;
+
 async function renderWatchlist() {
+  const seq = ++watchlistRenderSeq;
   const empty = $('#watchlist-empty');
   const table = $('#watchlist-table');
   $('#watch-count').textContent = state.watchlist.length || '';
@@ -231,6 +237,7 @@ async function renderWatchlist() {
   table.classList.remove('hidden');
   try {
     const data = await api(`/api/quotes?ids=${state.watchlist.join(',')}`);
+    if (seq !== watchlistRenderSeq) return; // superseded by a newer render — drop this stale one
     const coins = Object.values(data);
     rememberQuotes(coins);
     $('#watchlist-body').innerHTML = coins
@@ -247,7 +254,7 @@ async function renderWatchlist() {
       })
       .join('');
   } catch (err) {
-    showError(err);
+    if (seq === watchlistRenderSeq) showError(err);
   }
 }
 
